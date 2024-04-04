@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML/CSS Studio</title>
+    <!-- import CSS styles -->
+    <link rel="stylesheet" href="styles.css" /> 
+  </head>
+
+  <!-- page content goes into <body> -->
+  <body>
+    <h1> Background</h1>
+        <p>
+            For this project I wanted to create a Pokedex from the Pokemon games and to be able
+            to add and remove pokemon from a team while also being able to search for them in different 
+            ways. Since I knew that I was going to be needing to use a variety of things such as an agregator
+            sorter and filter I started by doing a competitive analysis of a few existing platforms that 
+            use similar systems. 
+        </p>
+    <h2> Competitve Analysis</h2>
+        <p> 
+            I researched three platforms that I knew used agggregatoris. I went to 
+            <a href="https://www.netflix.com" target="_blank">Netflix</a>, 
+            <a href="https://www.spotify.com" target="_blank">Spotify</a>, and 
+            <a href="https://www.goodreads.com" target="_blank">Goodreads</a> 
+            to get inspiration by observing how they used different and similar techniques. 
+            These can be observed in the table below.
+        </p>
+        <table border="1">
+            <tr>
+              <th>Company Name</th>
+              <th>Wrote Description</th>
+              <th>Includes Date Added</th>
+              <th>Add button is visible</th>
+              <th>Has sorting</th>
+              <th>Information is private</th>
+              <th>Aggregator created on login</th>
+            </tr>
+            <tr>
+              <td>Spotify</td>
+              <td>X</td>
+              <td>&#10004</td>
+              <td>&#10004</td>
+              <td>X</td>
+              <td>&#10004</td>
+              <td>&#10004</td>
+            </tr>
+            <tr>
+              <td>Goodreads</td>
+              <td>&#10004</td>
+              <td>&#10004</td>
+              <td>&#10004</td>
+              <td>&#10004</td>
+              <td>X</td>
+              <td>&#10004</td>
+            </tr>
+            <tr>
+              <td>Netflix</td>
+              <td>X</td>
+              <td>X</td>
+              <td>&#10004</td>
+              <td>X</td>
+              <td>&#10004</td>
+              <td>&#10004</td>
+            </tr>
+          </table>
+
+  </body>
+  <h3>Analysis</h3>
+  <p>
+    Looking at the table above and how I personally interacted with each of these interfaces,
+    I concluded that Spotify's like button that then creates a liked songs playlists was effective
+    in giving the user information about the liked song in the playlist, such as date added, artist
+    and the album it belongs to. I do think that the lack of having a visible like button at all times
+    can make it so that it is hard to use the feauture for the first time. In the case of Goodreads, I think that
+    the best feautre they employed is the ability to leave a review with a description, because it allows users to 
+    remember what it is that they liked about the book. The only negative thing that I found from their aggregator
+    was how it looked aesthetically, as it looked a bit outdated. Finally, Netflix had in my opinion the worst
+    aggregator, which I think is because it is probably the least useful. Having a to watch list just requires a person
+    to add/remove a movie from the list> I think their best feautre is how simple and sleek it looks, however the inability to see
+    details of why/when this movie was added takes context out that could be helpful for a user to make a decision on the movie they want to watch next.
+  </p>
+  <h2> What I learned</h2>
+  <p>
+    From this extensive research I learned that for my pokedex web application, I wanted to have affordances in the design, like using 
+    symbols for the filter that become opaque when they are turned of. Also, I want to include clear add/remove buttons that make it easy 
+    to know what is already part of the team. I do think that for the purpose of my idea, it is not necessary to have too much information about 
+    the pokemon in the aggregator since the information will be easily available to its side. Instead I want to display a simple image of the Pokemon
+    that was added and keep all the information in the searcher.
+  </p>
+  <h1>Implementation</h1>
+  <p> 
+    For the implementation of my project I have three main components. There is my filter which uses different Pokemon Typings,
+    there is my sorter that uses stats, alphabetical and pokedex entry sorting (with a reverse order feauture) and there is an 
+    aggregator which is the pokemon team the user is trying to build.
+  </p>
+  <h2>Filter</h2>
+  <p>
+    For the filter i decided to use all the pokemon types. For context, when building a Pokemon team, typing is very important.
+    Most people like to have a balanced team with types that resist/are super effective against all other types. But it's also a useful 
+    feauture to look for Pokemon in a specific type category. The way my filter works is that 
+    by default all types are on, but if you press one of the icons it will visbly look more opaque and all the pokemon of that type will
+    disapper from the Pokedex.
+    
+  </p>
+  <img src="./images/filter.png"/>
+  <h2>Sorter</h2>
+  <p>
+    For the sorter I decided to put many different categories that can go in both descending and ascending order.
+    By pressing the button the user can switch categories and order depending on what attribute they are looking for
+    or what pokemon they are looking for, knowing their name/entry number.
+    
+  </p>
+  <img src="./images/sorter.png"/>
+  <h2>Aggregator</h2>
+  <p>
+    For the aggregator I used a simple collection of up to six pokemon that could all be added to the team. A user is unable to have 
+    more than this number of pokemon on their team and there is a text bubble that tells them when their team is full. If they wish to add
+    or remove somthing from the aggregator all the have to do is look for the desired Pokemon and press the add or remove button in their card. 
+    
+  </p>
+  <img src="./images/team.png"/>
+  <h1>Overall Overview</h1>
+  <p>
+    In the end, this program was desgined for Pokemon players who desire to plant/build a team and look at relevant information
+    like base stats and typing.
+  </p>
+  <img src="./images/overall.png"/>
